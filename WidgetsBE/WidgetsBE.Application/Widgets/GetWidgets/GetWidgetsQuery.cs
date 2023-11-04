@@ -18,9 +18,9 @@ public class GetWidgetsQuery : IRequest<GetWidgetsResponse>
     public class Handler : IRequestHandler<GetWidgetsQuery, GetWidgetsResponse>
     {
         private readonly IMapper _mapper;
-        private readonly WidgetsRepository _widgetsRepository;
+        private readonly IWidgetsRepository _widgetsRepository;
 
-        public Handler(IMapper mapper, WidgetsRepository widgetsRepository)
+        public Handler(IMapper mapper, IWidgetsRepository widgetsRepository)
         {
             _mapper = mapper;
             _widgetsRepository = widgetsRepository;
