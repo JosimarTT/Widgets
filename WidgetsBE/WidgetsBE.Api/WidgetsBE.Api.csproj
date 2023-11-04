@@ -16,6 +16,7 @@
     <ItemGroup>
         <ProjectReference Include="..\WidgetsBE.Api.GrpcLibrary\WidgetsBE.Api.GrpcLibrary.csproj"/>
         <ProjectReference Include="..\WidgetsBE.Application\WidgetsBE.Application.csproj"/>
+        <ProjectReference Include="..\WidgetsBE.Shared\WidgetsBE.Shared.csproj" />
     </ItemGroup>
 
 </Project>

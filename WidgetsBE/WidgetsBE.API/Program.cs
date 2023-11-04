@@ -1,4 +1,11 @@
+using System.Reflection;
 using WidgetsBE.Api.Services;
+using WidgetsBE.Application;
+using WidgetsBE.Persistence;
+using WidgetsBE.Persistence.Repositories;
+using MediatR;
+using WidgetsBE.Application.Widgets.GetWidgets;
+using WidgetsBE.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
+
+builder.Services.AddAutoMapper(cfg => Assembly.GetExecutingAssembly(), PersistenceAssembly.GetPersistenceAssembly.Value, ApplicationAssembly.GetApplicationAssembly.Value, SharedAssembly.GetSharedAssembly.Value);
+
+builder.Services.AddScoped<IWidgetsRepository, WidgetsRepository>();
+//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
+builder.Services.AddMediatR(cfg => { cfg.RegisterServicesFromAssemblies(typeof(GetWidgetsQuery).Assembly); });
 
 var app = builder.Build();
 
