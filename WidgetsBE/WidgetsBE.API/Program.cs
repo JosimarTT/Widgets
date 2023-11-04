@@ -1,4 +1,4 @@
-using WidgetsBE.Services;
+using WidgetsBE.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

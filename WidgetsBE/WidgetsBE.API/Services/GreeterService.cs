@@ -1,7 +1,7 @@
 using Grpc.Core;
-using WidgetsBE;
+using WidgetsBE.API;
 
-namespace WidgetsBE.Services;
+namespace WidgetsBE.API.Services;
 
 public class GreeterService : Greeter.GreeterBase
 {

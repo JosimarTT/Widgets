@@ -1,0 +1,13 @@
+syntax = "proto3";
+import "Widget.proto";
+
+package GrpcLibrary.Widgets;
+
+message GetWidgetsRequest {}
+
+message GetWidgetsResponse
+{
+  bool is_success = 1;
+  string error = 2;
+  repeated Widget widgets = 3;
+}
