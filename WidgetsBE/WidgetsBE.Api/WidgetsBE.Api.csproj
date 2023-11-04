@@ -8,7 +8,7 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="12.0.1"/>
-        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1"/>
         <PackageReference Include="Grpc.AspNetCore" Version="2.49.0"/>
         <PackageReference Include="MediatR" Version="12.1.1"/>
     </ItemGroup>
@@ -16,7 +16,7 @@
     <ItemGroup>
         <ProjectReference Include="..\WidgetsBE.Api.GrpcLibrary\WidgetsBE.Api.GrpcLibrary.csproj"/>
         <ProjectReference Include="..\WidgetsBE.Application\WidgetsBE.Application.csproj"/>
-        <ProjectReference Include="..\WidgetsBE.Shared\WidgetsBE.Shared.csproj" />
+        <ProjectReference Include="..\WidgetsBE.Shared\WidgetsBE.Shared.csproj"/>
     </ItemGroup>
 
 </Project>
