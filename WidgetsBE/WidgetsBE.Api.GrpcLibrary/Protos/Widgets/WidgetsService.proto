@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "GetWidgets.proto";
+import "Protos/Widgets/Messages/GetWidgets.proto";
 
 package GrpcLibrary.Widgets;
 
